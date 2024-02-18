@@ -1,0 +1,31 @@
+import discord
+from discord.ext import commands
+import random
+
+bot = commands.Bot(command_prefix='!')
+
+# Список мемов
+memes = [
+    "mem1.jpg",
+    "mem2.jpg",
+    "mem3.jpg",
+    # Добавьте здесь еще мемы
+]
+
+@bot.event
+async def on_ready():
+    print(f'Logged in as {bot.user}')
+
+@bot.command(name='mem')
+async def send_meme(ctx):
+    meme = random.choice(memes)
+    await ctx.send(file=discord.File(meme))
+
+@bot.command(name='map')
+async def send_map(ctx):
+    # Здесь нужно добавить вашу ссылку на карту сдачи мусора
+    map_url = "https://example.com/map"
+    await ctx.send(f'Вот ссылка на карту сдачи мусора: {map_url}')
+
+# Вставьте ваш токен бота Discord
+bot.run('MTIwMTA2Nzk2NDE3MTAzODgxMQ.G5fPBQ.mUnm4VDcvr0dFMNaVlIX70X3xhYdSs2lXsSQ5c')
