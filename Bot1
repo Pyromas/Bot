@@ -28,4 +28,5 @@ async def send_map(ctx):
     await ctx.send(f'Вот ссылка на карту сдачи мусора: {map_url}')
 
 # Вставьте ваш токен бота Discord
-bot.run('MTIwMTA2Nzk2NDE3MTAzODgxMQ.G5fPBQ.mUnm4VDcvr0dFMNaVlIX70X3xhYdSs2lXsSQ5c')
+bot.run('ещлут
+')
